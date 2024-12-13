@@ -1,0 +1,121 @@
+:root {
+    /*Hier werden für Farben Variabeln erstellt*/
+    --primary-color: #ffffff;
+    /* Weiss */
+    --secondary-color: #000000;
+    /* Schwarz */
+    --third-color: #808080;
+    /* Grau*/
+    --fourth-color: #0c2a6b;
+    /*dunkel blau*/
+}
+
+body{
+    background-color: var(--fourth-color);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: var(--third-color);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: right;
+}
+
+nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 1vw;
+    display: block;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+}
+
+.sidebar{
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background: var(--third-color);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateX(100%); 
+}
+.sidebar.show-sidebar {
+    transform: translateX(0);
+}
+
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+@media(max-width: 1000px){
+    .hideOnMobile{
+        display: none;
+    }
+}
+
+path{
+    display: none;
+}
+
+@media(max-width: 1000px){
+    path{
+        display: grid;
+
+    }
+}
+
+
+html,
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+h1,
+h2,
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/*Hier wird die Responsivnes eingerichtet*/
+h1 {
+    font-size: clamp(20px, 3vw, 70px);
+                    /*min preferred max*/
+    margin-top: 100px
+}
+
+h2 {
+    font-size: clamp(20px, 2vw, 70px);
+}
+
+p {
+    font-size: clamp(20px, 0.7vw, 70px);
+}
+
+h1{
+    line-height: 1.5;
+}
+

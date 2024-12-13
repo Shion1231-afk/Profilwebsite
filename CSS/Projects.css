@@ -1,0 +1,15 @@
+
+ul {
+    text-align: center;
+}
+li {
+    list-style: none;
+}
+a {
+    color: white;
+}
+h1{
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-style: wavy;
+}
